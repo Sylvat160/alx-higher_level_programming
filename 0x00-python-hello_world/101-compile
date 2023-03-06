@@ -1,0 +1,12 @@
+#!/bin/bash
+# Get the Python file name from the environment variable
+PYFILE=$PYFILE
+
+# Generate the output filename by adding 'c' to the end of the original file name
+PYFILEC="${PYFILE}c"
+
+# Compile the Python script file and save the compiled bytecode to the output file
+python3 -m compileall $PYFILE && mv "${PYFILE}__pycache__/${PYFILE}*.pyc" $PYFILEC
+
+# Remove the __pycache__ directory created during compilation
+rm -rf "${PYFILE}__pycache__"
