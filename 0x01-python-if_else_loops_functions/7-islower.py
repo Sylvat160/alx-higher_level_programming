@@ -2,8 +2,8 @@
 
 def islower(c):
     if ord(c) >= 97 and ord(c) <= 122:
-        print(f"{c} is lower")
+        print(f"{c} => lower")
         return True
     else:
-        print(f"{c} is not upper")
+        print(f"{c} => upper")
         return False
