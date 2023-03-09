@@ -2,13 +2,13 @@
 
 if __name__ == '__main__':
     # import module
-    import calculator_1 as cal
+    import calculator_1 
 
     a = 10
     b = 5
 
-    print(f"{a} + {b} = {cal.add(a, b)}")
-    print(f"{a} - {b} = {cal.sub(a, b)}")
-    print(f"{a} * {b} = {cal.mul(a, b)}")
-    print(f"{a} / {b} = {cal.div(a, b)}")
+    print(f"{a} + {b} = {calculator_1.add(a, b)}")
+    print(f"{a} - {b} = {calculator_1.sub(a, b)}")
+    print(f"{a} * {b} = {calculator_1.mul(a, b)}")
+    print(f"{a} / {b} = {calculator_1.div(a, b)}")
 
