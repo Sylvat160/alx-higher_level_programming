@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 
 def print_matrix_integer(matrix=[[]]):
-    # matrix = [[row[i] for i in range(len(row))] for row in matrix]
-    transposed = []
-    for i in range(len(matrix)):
-        transposed.append([row[i] for row in matrix])
-    print("{}".format(transposed))
+    for row in matrix:
+        for col in row:
+            print("{:d}".format(col), end=" " if col != row[-1] else "")
+        print()
