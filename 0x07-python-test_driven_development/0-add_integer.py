@@ -5,15 +5,25 @@
 
 
 def add_integer(a, b=98):
-    """adds two arguments(int or float)
-    Args:
-        a (int or float): first argument
-        b (int or float): second argument
-    Returns:
-        int: the sum of a and b
     """
-    if type(a) != int and type(a) != float:
-        raise TypeError("a must be an integer")
-    if type(b) != int and type(b) != float:
-        raise TypeError("b must be an integer")
+    Adds 2 integers.
+
+    Arguments:
+    a -- an integer or float
+    b -- an integer or float (default 98)
+
+    Returns:
+    The addition of a and b, casted to an integer.
+
+    Raises:
+    TypeError: if a or b is not an integer or float.
+    """
+
+    if type(a) not in [int, float]:
+        raise TypeError("a must be an integer or b must be an integer")
+
+    if type(b) not in [int, float]:
+        raise TypeError("b must be an integer or b must be an integer")
+
     return int(a) + int(b)
+
