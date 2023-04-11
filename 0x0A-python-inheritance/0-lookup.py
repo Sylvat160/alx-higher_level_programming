@@ -9,4 +9,4 @@ def lookup(obj):
     returns a list of available attributes
     & method of an object
     """
-    return (dir(obj))
+    return dir(obj)
