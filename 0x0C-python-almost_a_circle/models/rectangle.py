@@ -2,6 +2,7 @@
 
 from models.base import Base
 
+
 class Rectangle(Base):
     """Represent a rectangle"""
 
@@ -42,7 +43,7 @@ class Rectangle(Base):
     def height(self):
         """Get/set the height of the Rectangle."""
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if type(value) is not int:
@@ -55,7 +56,7 @@ class Rectangle(Base):
     def x(self):
         """Get/set the x coordinate of the Rectangle."""
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         if type(value) is not int:
@@ -68,7 +69,7 @@ class Rectangle(Base):
     def y(self):
         """Get/set the y coordinate of the Rectangle."""
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         if type(value) is not int:
@@ -80,13 +81,13 @@ class Rectangle(Base):
     def area(self):
         """Return the area of the Rectangle."""
         return self.__width * self.__height
-    
+
     def display(self):
         """Print the Rectangle with the character #."""
         if self.width == 0 or self.height == 0:
             print("")
             return
-        
+
         [print("") for i in range(self.y)]
         for i in range(self.height):
             [print(" ", end="") for j in range(self.x)]
