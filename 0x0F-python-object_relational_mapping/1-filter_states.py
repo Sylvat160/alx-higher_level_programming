@@ -1,6 +1,7 @@
-#!/usr/bin/python3
+#!/user/bin/python3
 """
 Lists all states from the database hbtn_0e_0_usa
+with a name starting with N (upper N)
 """
 
 import sys
@@ -11,7 +12,11 @@ if __name__ == '__main__':
                          db=sys.argv[3], port=3306)
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states;")
+    cur.execute("SELECT * \
+    FROM states \
+    WHERE CONVERT(`name` USING Latin1) \
+    COLLATE Latin1_General_CS \
+    LIKE 'N%';")
     states = cur.fetchall()
 
     for state in states:
